@@ -18,8 +18,7 @@
 
 \renewcommand{\familydefault}{\rmdefault} 
 
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
+
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[]
 \titlespacing{\section}{0pt}{3pt}{3pt}
 %Tweak a bit the top margin
@@ -32,6 +31,8 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 
+\usepackage{changepage}
+
 \usepackage{enumitem}
 \usepackage{booktabs}
 
@@ -42,19 +43,6 @@
 
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
-
-%WATERMARK TEST [**not part of a CV**]---------------
-%\font\wm=''Baskerville:color=787878'' at 8pt
-%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
-%{\wm 
-%	\begin{textblock}{1}(0,0)
-%		\rotatebox{-90}{\parbox{500mm}{
-%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
-%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
-%		}
-%	}
-%	\end{textblock}
-%}
 
 \pagestyle{empty} % non-numbered pages
 
@@ -80,27 +68,31 @@
 
 
 \begin{minipage}{.67\textwidth}
-%\raggedleft
 
-\par{\centering
-		{\Huge  \textsc{Natalia Tymchuk}
+%\raggedright
+
+\par{{\Huge \hspace{16mm}\textsc{Natalia Tymchuk}
 	}\bigskip\par}
 
 \vspace{2ex}
 
-\begin{tabular}{r l}
+\begin{adjustwidth}{-2mm}{}
+
+\begin{tabular}{l l}
+%\hspace{-2mm}	
 	\multicolumn{2}{l}{\textbf{Personal Information}} \\
-	\textsc{Nationality:} & Ukrainian\\
-	\textsc{Born:} & 9.02.1991\\
+	\textsc{Nationality:} & \hspace{-2mm}Ukrainian\\
+	\textsc{Born:} & \hspace{-2mm}9.02.1991\\
 	\\
 	\multicolumn{2}{l}{\textbf{Contacts}} \\
-   \textsc{Address:}   & Via G. Buffi 13, 6904, \\
-   						& Lugano, Switzerland \\
-    \textsc{email:}     & \href{mailto:natalia.tymchuk@usi.ch}{natalia.tymchuk@usi.ch}
+   \textsc{Address:}   & \hspace{-2mm}Via G. Buffi 13, 6904, \\
+   						& \hspace{-2mm}Lugano, Switzerland \\
+    \textsc{email:}     & \hspace{-2mm}\href{mailto:natalia.tymchuk@usi.ch}{natalia.tymchuk@usi.ch}
 \end{tabular}
+\end{adjustwidth}
 \end{minipage}%
 \begin{minipage}{4cm}
-  \includegraphics[width=4cm]{photo}
+  \vspace{15mm}\hspace{9mm}\includegraphics[width=3cm]{photoCV}
 \end{minipage}
 
 %\begin{minipage}{.2\textwidth}
@@ -114,7 +106,7 @@
 %\begin{table}[h!]
 %     \begin{center}
 %     \begin{tabular}{ p{3cm}  p{5cm} c }
-%		\textbf{Personal}			& \textbf{Information}	& \raisebox{-\totalheight}{\includegraphics[width=0.2\textwidth, height=35mm]{photo.png}} 
+%		\textbf{Personal}			& \textbf{Information}	& \raisebox{-\totalheight}{\includegraphics[width=0.2\textwidth, height=35mm]{photoCV.png}} 
 %\\ 
 %		\textsc{Nationality:} 	& Ukrainian &\\
 %		\textsc{Born:} 			& 9.02.1991 &\\
@@ -133,6 +125,7 @@
 
 %Section: Education
 \section{Education}
+\begin{adjustwidth}{-2mm}{}
  \begin{tabular}{p{2cm} p{11cm}}	
 
  \textsc 2015 -- now  & \textbf{Ph.D. in  \textsc{Informatics}}\\
@@ -154,9 +147,12 @@
 &Specialization in Physics and Mathematics\\
 \\  
 \end{tabular}
+\end{adjustwidth}
+
 
 %Section:  Experience 
 \section{Experience and Projects}
+\begin{adjustwidth}{-2mm}{}
 \begin{tabular}{p{2cm} p{11cm}}
  \textsc{Mar-Sep} & Project: \textbf{Voronyj diagram builder for Roassal}\\ 
 \centering{2014}&Responsibilities: development of Voronyj (Voronoi) diagram builder in Pharo (Smalltalk dialect), using Roassal (agile visualisation engine).\\
@@ -169,9 +165,12 @@
 &\footnotesize{ You can read more about this project here: \href{http://gsoc2013.esug.org/projects/scismalltalk}{gsoc2013.esug.org/projects/scismalltalk}  or you can read more about what I did on my blog: \href{http://blog.natalia.tymchuk.me}{blog.natalia.tymchuk.me}.}\\\multicolumn{2}{c}{} \\
 
 \end{tabular}
+\end{adjustwidth}
+
 
 %Section: MOOC
 \section{Massive Open Online Courses}
+\begin{adjustwidth}{-2mm}{}
 \begin{tabular}{p{2cm} p{11cm}}
 \textsc{2013} & \textbf{An Introduction to Interactive Programming in Python}\\
   &Coursera ­ Rice University. \footnotesize{Completion Score: 96.4/100}\\
@@ -181,13 +180,17 @@
  &Coursera ­ University of Toronto. \footnotesize{Completion Score: 98,2/100}\\
  &\footnotesize{\href{http://natalia.tymchuk.me/Coursera%20programming1%202014.pdf}{See certificat }}\\  
 \end{tabular}
+\end{adjustwidth}
+
 
 %Section: Languages
 \section{Languages}
+\begin{adjustwidth}{-2mm}{}
 \begin{tabular}{p{2cm} p{11cm}}
  \textsc{Ukrainian:}&Mothertongue\\
 \textsc{English:}&Upper Intermediate\\
 \end{tabular}
+\end{adjustwidth}
 
 
 %\newpage
